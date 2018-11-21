@@ -1,0 +1,52 @@
+{
+  "name": "node-ts-api-sample",
+  "description": "Sample project for NodeJS Server with API",
+  "version": "0.0.1",
+  "license": "UNLICENSED",
+  "main": "lib/index.js",
+  "scripts": {
+    "start": "node lib/index.js",
+    "build": "tsc",
+    "clean": "rimraf lib logs reports",
+    "test": "jest",
+    "lint": "tslint --project tsconfig.json \"./src/**/*.ts\"",
+    "ci:test": "jest --coverage",
+    "ci:lint": "tslint --project tsconfig.json \"./src/**/*.ts\" -o reports/checkstyle-result.xml -t checkstyle"
+  },
+  "dependencies": {
+    "bluebird": "~3.5.3",
+    "body-parser": "~1.18.3",
+    "compression": "~1.7.3",
+    "config": "~2.0.1",
+    "cors": "~2.8.5",
+    "express": "~4.16.4",
+    "express-correlation-id": "~1.2.0",
+    "jsonwebtoken": "~8.4.0",
+    "lodash": "~4.17.11",
+    "glob": "~7.1.3",
+    "helmet": "~3.15.0",
+    "morgan": "~1.9.1",
+    "request": "~2.88.0",
+    "request-promise": "~4.2.2",
+    "swagger-ui-express": "~4.0.1",
+    "typescript": "~3.1.6",
+    "uuid": "~3.3.2",
+    "winston": "~3.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "~23.3.9",
+    "@types/node": "~10.12.9",
+    "jest": "~23.6.0",
+    "jest-junit": "~5.2.0",
+    "rimraf": "~2.6.2",
+    "supertest": "~3.3.0",
+    "ts-jest": "~23.10.4",
+    "ts-node": "~7.0.1",
+    "ts-node-dev": "~1.0.0-pre.30",
+    "tslint": "~5.11.0"
+  },
+  "engines": {
+    "node": ">=8.9.1",
+    "npm": ">=5.5.1"
+  }
+}
