@@ -1,0 +1,20 @@
+image: node:alpine
+
+stages:
+- test
+
+tslint:
+  stage: test
+  script:
+  - apk add --no-cache npm
+  - npm i
+  - npm run ci:lint
+
+test-ng:
+  stage: test
+  script:
+  - apk add --no-cache npm chromium chromium-chromedriver udev ttf-freefont
+  - export CHROME_BIN=/usr/bin/chromium-browser
+  - npm i
+  - npm run ci:test
+  
